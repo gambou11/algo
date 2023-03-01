@@ -1,0 +1,29 @@
+ALGORITHM solution
+VAR
+numwords:INTEGER=1;
+numvowels:INTEGER=0;
+str:STRING;
+len:INTEGER=0;    
+BEGIN
+write ("type a sentence");
+REPEAT
+    read (str);
+UNTIL (str[str.length-1]==".");
+FOR i FROM 0 TO str.length-1 DO
+    IF (str[i]=" ") THEN
+            numwords:=numwords+1;
+        END_IF
+    END_IF
+END_FOR
+FOR i FROM 0 TO str.length-1 DO
+    IF (str[i]=['a', 'e' , 'o' , 'i' ,'u']) THEN
+    numvowels:= numvowels+1;
+    END_IF
+END_FOR
+    len:= str.length
+    Write (str);
+    Write (len);
+    Write (numwords);
+    Write (numvowels);
+END
+
